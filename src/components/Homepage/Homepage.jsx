@@ -23,7 +23,7 @@ const Homepage = ()=>{
 
     window.addEventListener('DOMContentLoaded', (event) => {
         // Reproducir automáticamente el video al cargar la página
-        const video = document.getElementById('videoPrincipal');
+        const video = document.getElementsByClassName('videoPrincipal');
         video.play();
         
         // Evitar que el video se abra en una ventana emergente en dispositivos móviles
