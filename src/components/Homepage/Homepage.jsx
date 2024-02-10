@@ -35,6 +35,16 @@ const Homepage = ()=>{
         }
     });
 
+    // Evitar que el video se abra en pantalla completa en dispositivos móviles al interactuar con la página
+    document.addEventListener('visibilitychange', () => {
+        const video = document.querySelectorAll('videoPrincipal');
+        if (document.visibilityState === 'hidden') {
+            video.pause();
+        } else {
+            video.play();
+        }
+    });
+
 
     return (
         <div className='homepage-container'>
