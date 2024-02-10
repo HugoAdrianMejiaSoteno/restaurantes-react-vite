@@ -241,6 +241,8 @@
             top: 90%;
             width: 60%;
             margin: 0;
+
+            display: none; /*Lo quitamos mejor*/
         }
 
     .logos-sesion-perfil{

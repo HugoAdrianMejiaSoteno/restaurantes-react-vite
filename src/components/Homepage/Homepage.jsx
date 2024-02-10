@@ -28,7 +28,7 @@ const Homepage = ()=>{
             {/* Primera seccion */}
             <div className="imagenPrincipal-container">
                 {/* El atributo playsinline es para que el video no salga en una ventana emergente de los dispositivos moviles NOTA: Muchos navegadores requieren que los videos estén en silencio para permitir la reproducción automática. Agrego el atributo muted al elemento <video> para garantizar que el video esté silenciado y el loop. */}
-                <video src={video1} autoPlay muted playsinline loop className='videoPrincipal'></video>
+                <video src={video1} autoPlay muted playsinline loop className='videoPrincipal' controls={false}></video>
                 <h3 className='textoVideo1'>NEW IN</h3>
                 <button className='boton1'>Visitar</button>
             </div>
