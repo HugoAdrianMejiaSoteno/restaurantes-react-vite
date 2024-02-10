@@ -21,6 +21,19 @@ const Homepage = ()=>{
     // eslint-disable-next-line no-unused-vars
     const [open, setOpen, datos, setDatos, datosRating5, setDatosRating5] = useContext(Contexto);
 
+    window.addEventListener('DOMContentLoaded', (event) => {
+        // Reproducir automáticamente el video al cargar la página
+        const video = document.getElementById('videoPrincipal');
+        video.play();
+        
+        // Evitar que el video se abra en una ventana emergente en dispositivos móviles
+        if ('ontouchstart' in window) {
+            video.addEventListener('touchstart', (event) => {
+                event.preventDefault();
+            });
+        }
+    });
+
 
     return (
         <div className='homepage-container'>
