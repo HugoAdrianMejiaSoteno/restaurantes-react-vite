@@ -1,0 +1,576 @@
+.homepage-container{
+    margin: 0;
+    padding: 0;
+    height: 1000%;
+    width: 100%;
+
+    /* background-color: red; */
+}
+
+/* seccion1 */
+
+.imagenPrincipal-container{
+    margin-top: 10px;
+    width: 100%;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+    /* background-color: blue; */
+}
+
+    .videoPrincipal{
+
+        width: 100%;
+        height: auto;
+        padding: 0px;
+        margin: 0px;
+    }
+    /* video{
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+    } */
+
+    .textoVideo1{
+        position: absolute;
+        color: white;
+        font-size: 45px;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .boton1{
+        position: absolute;
+        background-color: #0000005f; /* Fondo completamente transparente */
+        color: hsl(0, 0%, 100%); /* Color del texto del botón */
+        font-size: 25px;
+        border: 1px solid hsl(0, 0%, 100%); /* Borde con un color para que el botón sea visible */
+        height: 40px;
+        width: 130px;
+        border-radius: 20px;
+        top:73%;
+        left: 50%;
+        font-weight: bold;
+        transform: translate(-50%, -50%); /*Centra el boton*/
+    }
+
+    .boton1:hover{
+        background-color: hwb(0 0% 100%);
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
+/* 
+    .imagen-principal{
+        width: 100%;
+        height: 700px;
+    } */
+
+ /* seccion 2 */
+.section2-imagenes{
+    display: flex;
+    height: 600px;
+    width: 100%;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-top: 30px;
+}
+
+    .section2-imagen1{
+        width: 30%;
+        height: 100%;
+        margin-left: 0.4%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .boton{
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0); /* Fondo completamente transparente */
+        color: hsl(0, 0%, 100%); /* Color del texto del botón */
+        font-size: 20px;
+        border: 2px solid hsl(0, 0%, 100%); /* Borde con un color para que el botón sea visible */
+        height: 40px;
+        width: 140px;
+        top: 82%;
+        left: 50%;
+        font-weight: bold;
+        transform: translate(-50%, -50%); /*Centra el boton*/
+    }
+    
+    .boton:hover{
+        background-color: hsl(0, 0%, 64%);
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+        .section2Imagen1{
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            transition: all 1s;
+        }
+        
+        .section2Imagen1:hover{
+            transform: scale(1.5);
+        }
+
+    .section2-imagenes2{
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        margin-left: 0.4%;
+        width: 25%;
+        overflow: hidden;
+    }
+
+        .contenedorImagen2{
+            height: 70%;
+            overflow: hidden;
+            margin-bottom: 1.5%;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .section2imagen2{
+            height: 100%;
+            width: 100%;
+            transition: all 0.9s;
+        }
+
+        .section2imagen2:hover{
+            transform: scale(1.3);
+        }
+        
+        .contenedorImagen3{
+            height: 30%;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .section2imagen3{
+            height: 100%;
+            width: 100%;
+            transition: all 0.9s;
+        }
+
+        .section2imagen3:hover{
+            transform: scale(1.3);
+        }
+
+    .section2-imagenes3{
+        width: 44%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0.5%;
+    }
+
+        .section2-imagenes3-1{
+            display: flex;
+            width: 100%;
+            height: 50%;
+        }
+
+            .contenedor-imagen4{
+                width: 50%;
+                height: 100%;
+                overflow: hidden;
+                cursor: pointer;
+                position: relative;
+            }
+            .section2-imagen4{
+                height: 100%;
+                width: 100%;
+                transition: all 0.9s;
+            }
+
+            .section2-imagen4:hover{
+                transform: scale(1.3);
+            }
+
+            .contenedor-imagen5{
+                width: 49%;
+                height: 100%;
+                margin-left: 1%;
+                overflow: hidden;
+                cursor: pointer;
+                position: relative;
+            }
+
+            .section2-imagen5{
+                height: 100%;
+                width: 100%;
+                transition: all 0.9s;
+            }
+
+            .section2-imagen5:hover{
+                transform: scale(1.3);
+            }
+
+    .section2-imagenes3-2{
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+        margin-top: 1%;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .section2-imagen6{
+        height: 100%;
+        width: 100%;
+        transition: all 0.9s;
+    }
+    .section2-imagen6:hover{
+        transform: scale(1.3);
+    }
+
+/* seccion 3 */
+
+.section3-homepage{
+    margin-top: 0;
+    padding-top: 0px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+    .titulo-section3-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+    }
+        .titulo-seccion3{
+            font-size: 45px;
+            
+        }
+
+    /* section4  */
+    .section4-homepage{
+        height: 500px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .textoCont-section4{
+        height: 80%;
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+        .tituloSection4{
+            font-size: 50px;
+            padding-left: 100px;
+        }
+
+    .contenedorImg-section4{
+        position: relative;
+        height: 80%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+        .img-section4{
+            height: 100%;
+            width: 100%;
+            transition: all 0.9s;
+        }
+
+        .img-section4:hover{
+            transform: scale(1.2);
+        }
+
+        .navidad-btn{
+            position: absolute;
+            background-color: hsla(0, 0%, 0%, 0.607); /* Fondo completamente transparente */
+            color: hsl(0, 0%, 100%, 1); /* Color del texto del botón */
+            font-size: 25px;
+            border: 1px solid hsl(0, 0%, 100%); /* Borde con un color para que el botón sea visible */
+            height: 40px;
+            width:25%;
+            border-radius: 20px;
+            top:73%;
+            left: 50%;
+            font-weight: bold;
+            transform: translate(-50%, -50%); /*Centra el boton*/
+        }
+
+           .navidad-btn:hover{
+            background-color: white;
+            color: black;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    
+@media (max-width: 768px) {
+    
+    .homepage-container{
+    }   
+
+    /* Primera seccion */
+    .imagenPrincipal-container{
+        overflow: hidden;
+        margin: 0;
+        position: relative;
+        height: 850px;
+    }
+
+    .videoPrincipal{
+        top: 0;
+        left: -32%;
+        position: absolute;
+        transform: translateX(-32%);
+        width: auto;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+        /* margin-right: 90%; */
+    }
+
+    .boton1{
+        background-color: hwb(0 0% 100% / 0.527);
+    } 
+
+    /* segunda seccion */
+
+    .section2-imagenes{
+        /* background-color: red; */
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+        /* margin: 0; */
+        padding: 0;
+        height: 610px;
+    }
+
+    .boton{
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0); /* Fondo completamente transparente */
+        color: hsl(0, 0%, 100%); /* Color del texto del botón */
+        font-size: 20px;
+        border: 2px solid hsl(0, 0%, 100%); /* Borde con un color para que el botón sea visible */
+        height: 40px;
+        width: 140px;
+        top: 70%;
+        left: 50%;
+        font-weight: bold;
+        transform: translate(-50%, -50%); /*Centra el boton*/
+    }
+
+        .section2-imagen1{
+            margin: 0;
+            padding: 0;
+            /* background-color: purple; */
+            height: calc(600px / 5);
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 3px;
+        }
+            .section2Imagen1{
+                height: auto;
+                width: 100%;
+                /* transform: translateX(10%); */
+                /* padding-bottom: 3px; */
+            }
+
+        .section2-imagenes2{
+            margin: 0;
+            padding: 0;
+            /* background-color: green; */
+            width: 100%;
+            height: calc((600px /5 ) * 2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: 3px;
+        }
+
+            .contenedorImagen2{
+                height: 50%;
+                width: 100%;
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+                margin-bottom: 3px;
+            }
+                .section2imagen2{
+                    height: auto;
+                    width: 100%;
+                }
+            .contenedorImagen3{
+                height: 50%;
+                width: 100%;
+                overflow: hidden;
+            }
+                .section2imagen3{
+                    height: auto;
+                    width: 100%;
+                    /* transform: translateX(-10%)/; */
+                }
+
+        .section2-imagenes3{
+            /* background-color: blue; */
+            width: 100%;
+            height: calc((600px /5 ) * 2);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .section2-imagenes3-1{
+                /* background-color: yellow; */
+                height: 50%;
+                width: 100%;
+                display: flex;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 3px;
+            }
+
+                .contenedor-imagen4{
+                    /* background-color: chartreuse; */
+                    height: 100%;
+                    width: 50%;
+                    margin: 0;
+                    padding: 0;
+                    margin-right: 3px;
+                }
+                .contenedor-imagen5{
+                    background-color: orange;
+                    height: 100%;
+                    width: 50%;
+                    margin: 0;
+                    padding: 0;
+                }
+            .section2-imagenes3-2{
+                /* background-color: aqua; */
+                height: 50%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+            }
+
+                .section2-imagen6{
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    height: auto;
+                }
+    
+    /* seccion 3 mejores ratings  */
+
+    .section3-homepage{
+        /* background-color: yellow; */
+
+    }
+
+        .titulo-section3-container{
+            /* background-color: aqua; */
+        }
+            .titulo-seccion3{
+                /* background-color: blue; */
+                font-size: 40px;
+            }
+
+    /* seccion 4 */
+
+    .section4-homepage{
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+        .textoCont-section4{
+            /* background-color: blue; */
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            height: 30%;
+        }
+
+            .tituloSection4{
+                /* background-color: yellow; */
+                text-align: center;
+                margin: 0;
+                padding: 0;
+            }
+
+        .contenedorImg-section4{
+            /* background-color: green; */
+            width: 100%;
+            height: 70%;
+        }
+
+            .img-section4{
+                height: 95%;
+                width: 95%;
+            }
+
+            .navidad-btn{
+                position: absolute;
+                background-color: hsla(0, 0%, 0%, 0.607); /* Fondo completamente transparente */
+                color: hsl(0, 0%, 100%, 1); /* Color del texto del botón */
+                font-size: 20px;
+                border: 1px solid hsl(0, 0%, 100%); /* Borde con un color para que el botón sea visible */
+                height: 40px;
+                width: 40%;
+                border-radius: 20px;
+                top:73%;
+                left: 50%;
+                font-weight: bold;
+                transform: translate(-50%, -50%); /*Centra el boton*/
+            }
+
+    /* seccion 5 */
+    .section3-homepage{
+        /* background-color: orange; */
+        height: 600px;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .titulo-section3-container{
+        /* background-color: blue; */
+    }
+
+    .titulo-seccion3{
+        /* background-color: aqua; */
+        font-size: 35px;
+    }
+}

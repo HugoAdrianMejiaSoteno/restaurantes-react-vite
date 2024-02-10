@@ -1,0 +1,231 @@
+
+.modal{
+    background-color: #00000062;
+    position: absolute;
+    height: 1000%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.modal-close{
+    display: none;
+}
+.perfil-container{
+    background-color: rgb(248, 240, 240); /*rgb(248, 240, 240)*/
+    transform: translateX(0px);
+    height: 100%; /* Establece la altura al 100% de la pantalla */
+    width: 25%; /* Ancho original, puedes cambiarlo si lo deseas */
+    position: fixed; /* Cambia de absolute a fixed para que se ajuste a la pantalla */
+    top: 0px;
+    left: 75%; /* Cambia la posición izquierda a 0 para que se alinee a la izquierda */
+    transition: all 0.8s ease;
+    z-index: 3;
+    /* background-color: red; */
+}
+
+.perfil-container-close{
+    transform: translateX(200%);
+    height: 100%;
+    width: 25%;
+    position: fixed;
+    top: 0px;
+    left: 75%;
+    transition: all 0.8s ease;
+}
+
+    .perfil-titulo{
+        height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: black;
+    }
+    .titulo-acceder{
+        font-size: 25px;
+        margin-left: 22%;
+        color: white;
+    }
+    .closeIcon{
+        height: 28px;
+        width: 28px;
+        cursor: pointer;
+        color: white;
+        /* background-color: blue; */
+        margin-right: 8%;
+    }
+
+.perfil-formulario{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: green; */
+}
+.formularioPrimeraParte{
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+.titulo-formulario{
+    height: 30px;
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    /* background-color: violet; */
+    margin-bottom: 35px;
+}
+
+.input{
+    height: 50px;
+    width: 80%;
+    padding-bottom: 10px;
+}
+
+.btn-perfil{
+    width: 80%;
+    margin: 10px;
+    /* margin-top: 12px; */
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: black;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-perfil:hover{
+    background-color: #00000096;
+}
+
+.privacidad-texto{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: justify;
+    width: 70%;
+    font-size: 13px;
+    /* background-color: aqua; */
+}
+
+.logos-sesion-perfil{
+    width: 100%;
+    /* height: 100px; */
+    display: flex;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    background-color: #cccccc; 
+}
+
+.btn-logos{
+    display: flex;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    align-items: center;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+}
+
+.btn-logos:hover{
+    width: 100px;
+    height: 100px;
+    box-shadow: 5px 5px 10px #00000096;
+}
+
+.logos-sesion{
+    width: 80%;
+    height: 80%;
+}
+
+.contenedor-logosDSesion{
+    height: 80%;
+    width: 35%;
+    margin: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+
+    .perfil-container{
+        width: 100%;
+        top: 0px;
+        left: 0;
+    }
+
+
+    .perfil-titulo{
+        justify-content: center;
+        position: relative;
+        width: 100%;
+
+        /* background-color: aqua; */
+    }
+        .titulo-acceder{
+            margin-left: 0;
+        }
+        .closeIcon{
+            position: absolute;
+            left: 85%;
+            top: 30%;
+        }
+
+    .perfil-formulario{
+        /* background-color: red; */
+    }
+
+    .formularioPrimeraParte{
+        height: 80%;
+        justify-content: start;
+        margin-top: 10%;
+        align-items: center;
+    }
+
+        .titulo-formulario{
+            font-size: 30px;
+            font-weight: bolder;
+            /* background-color: red; */
+            width: 70%;
+            height: 10%;
+        }
+
+        .input{
+            /* background-color: red; */
+            margin-bottom: 10%;
+            /* width: 70%; */
+        }
+
+        .checkbox{
+            margin-top: 5%;
+            /* background-color: red; */
+        }
+
+        .privacidad-texto{
+            font-size: 13px;
+            /* background-color: blue;   */
+            width: 60%;
+            margin-top: 20px;
+        }
+
+    .logos-sesion-perfil{
+        height: 20%;
+    }
+    
+        
+
+}

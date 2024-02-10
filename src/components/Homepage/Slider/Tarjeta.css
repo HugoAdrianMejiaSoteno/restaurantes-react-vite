@@ -1,0 +1,166 @@
+.tarjeta-container{
+    height: 380px;
+    width: 250px;
+    margin-right:20px;
+    margin-left:20px;
+    cursor: pointer;
+    margin-top: 40px;
+    background-color: white;
+}
+
+
+    .imagenTarjeta-container{
+        height: 80%;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .imagen-tarjeta{
+            height: 100%;
+            width: 100%;
+            transition: all 1.2s;
+        }
+
+        .imagen-tarjeta:hover{
+            transform: scale(1.2);
+            opacity: 70%;
+        }
+        .heart-tarjeta{
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            top: 92%;
+            left: 90%;
+            color: rgb(0, 0, 0);
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+
+        .heart-tarjeta:hover{
+            color: white;
+        }
+
+        .heart-tarjeta-rojo{
+            position: absolute;
+            height: 30px;
+            color: red;
+            width: 30px;
+            top: 92%;
+            left: 90%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+
+    .descripcionTarj-container{
+        height: 20%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nombreTarjeta{
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .precioTarjeta{
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+    }
+
+    .nombreColeccion{
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    .estrella{
+        color: #ffff00;
+        height: 15px;
+        width: 15px;
+    }
+
+@media (max-width:768px) {
+    .tarjeta-container{
+        height: 250px;
+        width: 40%; 
+        margin-right: 0px;
+        margin-left: 0px;
+        cursor: pointer;
+        margin-top: 30px;
+        /* background-color: red; */
+    }
+
+        .imagenTarjeta-container{
+            height: 80%;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            /* background-color: #ffff00; */
+        }
+
+            .imagen-tarjeta{
+                height: 100%;
+                width: 100%;
+                transition: all 1.2s;
+                margin: 0;
+                padding: 0;
+            }
+
+            .imagen-tarjeta:hover{
+                transform: scale(1.2);
+                opacity: 70%;
+            }
+
+
+        .descripcionTarj-container{
+            height: 20%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* background-color: blue; */
+            justify-content: end;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nombreTarjeta{
+            margin: 0;
+            padding: 0;
+            font-size: 15px;
+            margin-top: 10px;
+            /* background-color: orange; */
+            height: calc(100% /3);
+            width: 100%;
+        }
+
+        .precioTarjeta{
+            margin: 0;
+            padding: 0;
+            font-size: 13px;
+            /* background-color: green; */
+            height: calc(100% /3);
+        }
+
+        .estrellasContainer{
+            height: calc(100% /3);
+            /* background-color: red; */
+            /* display: flex;
+            align-items: center; */
+
+        }
+
+        .estrella{
+            margin: 0;
+            padding: 0;
+            color: #ffff00;
+            height: 15px;
+            width: 15px;
+            /* background-color: antiquewhite; */
+        }
+}

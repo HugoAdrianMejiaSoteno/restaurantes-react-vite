@@ -1,0 +1,191 @@
+.filtroBarra{
+    background-color: white;
+    height: 100%;
+    width: 35%;
+    position: fixed;
+    top: 60px;
+    left: 65%;
+    z-index: 3;
+    transform: translateX(0px);
+    transition: all 0.8s ease;
+    /* background-color: red; */
+}
+
+.filtroBarra-close{
+    transform: translateX(250%);
+    height: 100%;
+    position: fixed;
+    top: 60px;
+    left: 70%;
+    transition: all 1s ease;
+    background-color: white;
+    width: 30%;
+    top: 60px;
+    left: 70%;
+    z-index: 3;
+    /* background-color: aqua; */
+}
+
+.modal{
+    background-color: #00000062;
+    position: fixed;
+    height: 1000%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+}
+
+.modal-close{
+    display: none;
+    z-index: 2;
+}
+
+
+.filtroBarraAlfabeticoContainer{
+    /* background-color: blue; */
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.TituloBarraContainer{
+    /* background-color: aqua; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.closeIcon1{
+    /* background-color: green; */
+    /* margin-top: 40px; */
+    width: 10%;
+    height: 40%;
+    cursor: pointer;
+    /* margin-right: 30px; */
+    position: absolute;
+    top: 30%;
+    left: 85%;
+}
+.tituloBarraFiltro{
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    /* background-color: red; */
+}
+
+.inputsFIltroContainer{
+    /* background-color: red; */
+    height: 50%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.labelBarra{
+    font-size: 15px;
+    /* background-color: green; */
+    width: 80%;
+    height: 30%;
+    margin-right: 20%;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputBarra{
+    /* margin-top: 5%; */
+    /* margin-left: 10%; */
+    height: 15px;
+    width: 15px;
+    background-color: aqua;
+}
+
+
+.textoFiltroBarra{
+    /* background-color: green; */
+    margin-left: 15px;
+}
+
+.mapaContainer{
+    /* padding-top: 5%; */
+    /* background-color: green; */
+    display: flex;
+    /* text-align: center; */
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    height: 60%;
+    width: 100%;
+    /* padding-left: 5%; */
+}
+
+@media (max-width:768px){
+
+.filtroBarra{
+    /* background-color: red; */
+    height: 100%;
+    width: 70%;
+    position: fixed;
+    top: 60px;
+    left: 30%;
+    z-index: 3;
+    transform: translateX(0px);
+    transition: all 0.8s ease;
+    /* background-color: red; */
+}
+
+.filtroBarra-close{
+    transition: all 0.8s ease;
+    transform: translateX(250%);
+    height: 100%;
+    width: 70%;
+    position: fixed;
+    transition: all 0.8s ease;
+    background-color: white;
+
+    z-index: 3;
+    top: 60px;
+    left: 30%;
+    /* background-color: aqua; */
+}
+    .TituloBarraContainer{
+        /* background-color: aqua; */
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+    }
+
+        .closeIcon1{
+            /* background-color: green; */
+            /* margin-top: 40px; */
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            /* margin-right: 30px; */
+            position: absolute;
+            top: 30%;
+            left: 80%;
+        }
+        .tituloBarraFiltro{
+            width: 70%;
+            margin-left: 12%;
+            text-align: center;
+            font-size: 30px;
+            /* background-color: yellow; */
+        }
+
+    .mapaContainer{
+        display: none;
+    }
+}

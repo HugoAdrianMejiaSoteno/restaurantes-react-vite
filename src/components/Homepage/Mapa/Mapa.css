@@ -1,0 +1,13 @@
+.mapsContainer{
+    height: 200px;
+    /* padding: auto; */
+    /* width: 100% */
+    /* background-color: aqua; */
+}
+
+@media (max-width:768){
+    .mapsContainer{
+        margin: 0;
+        padding: 0;
+    }
+}

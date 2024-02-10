@@ -1,0 +1,45 @@
+.opcionMenu-container{
+    background-color: white;
+    height: 100px;
+    width: 100%;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: black;
+}
+
+.opcionMenu-container:hover{
+    background-color: #f0f0f0;
+}
+
+.opcionMenu-imagen-container{
+    height: 100%;
+    width: 30%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opcionMenu-imagen{
+    height: 80%;
+    width: 80%;
+    border-radius: 10%;
+}
+
+.opcionMenu-titulo-container{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    /* background-color: blue; */
+}
+
+.opcionMenu-titulo{
+    font-size: 25px;
+    font-weight: bolder;
+    margin-left: 10%;
+    text-transform: uppercase;
+}
