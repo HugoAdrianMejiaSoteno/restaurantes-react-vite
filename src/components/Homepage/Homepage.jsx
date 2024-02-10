@@ -23,8 +23,7 @@ const Homepage = ()=>{
 
     window.addEventListener('DOMContentLoaded', (event) => {
         // Reproducir automáticamente el video al cargar la página
-        const video = document.querySelectorAll('videoPrincipal');
-        // console.log(video)
+        const video = document.querySelector('.videoPrincipal');
         video.play();
         
         // Evitar que el video se abra en una ventana emergente en dispositivos móviles
@@ -33,16 +32,15 @@ const Homepage = ()=>{
                 event.preventDefault();
             });
         }
-    });
-
-    // Evitar que el video se abra en pantalla completa en dispositivos móviles al interactuar con la página
-    document.addEventListener('visibilitychange', () => {
-        const video = document.querySelectorAll('videoPrincipal');
-        if (document.visibilityState === 'hidden') {
-            video.pause();
-        } else {
-            video.play();
-        }
+    
+        // Evitar que el video se abra en pantalla completa en dispositivos móviles al interactuar con la página
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'hidden') {
+                video.pause();
+            } else {
+                video.play();
+            }
+        });
     });
 
 
