@@ -31,8 +31,8 @@ const Perfil = ()=>{
           <div className="perfil-formulario">
             <div className="formularioPrimeraParte">
               <p className='titulo-formulario'>INGRESA A TU CUENTA</p>
-              <TextField id="outlined-basic" label="Correo electronico" variant="outlined" className='input'style={{ marginTop: '30px' }}/>
-              <TextField id="outlined-basic" label="Contraseña" variant="outlined" className='input' margin='normal'style={{ marginTop: '30px' }}/>
+              <TextField id="outlined-basic" label="Correo electronico" variant="outlined" className='input'style={{ marginTop: '20px' }}/>
+              <TextField id="outlined-basic" label="Contraseña" variant="outlined" className='input' margin='normal'style={{ marginTop: '20px' }}/>
               <FormGroup className='checkbox'>
                 <FormControlLabel control={<Checkbox defaultChecked />} label="Mantener la sesion iniciada" />
               </FormGroup>

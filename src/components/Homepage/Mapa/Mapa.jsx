@@ -37,7 +37,7 @@ const Mapa = ()=>{
 
     const mapContainerStyle = {
         width: windowWidth <= 768 ? '250px' : '350px',
-        height: windowWidth <= 768 ? '150px' : '200px',
+        height: windowWidth <= 768 ? '130px' : '200px',
         margin: 0,
         padding: 0
       };

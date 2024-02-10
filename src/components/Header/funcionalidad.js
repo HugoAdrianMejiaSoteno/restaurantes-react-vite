@@ -102,12 +102,28 @@ export const headerMov = ()=>{
 // funcionalidad para scroll en  moviles
 
 //Añadimos la funcionalidad de que si se mueve hacia abajo con scroll en moviles el header cambie a color trasnparente con la clase scroll y cuando llegue al tope de arriba se haga de color blanco
+// window.addEventListener('scroll', function() {
+//     var header = document.querySelector('.header');
+//     if (window.scrollY > 0) {
+//         header.classList.add('scroll');
+//     } else {
+//         header.classList.remove('scroll');
+//     }
+//   });
+  
+let lastScrollTop = 0;
+
 window.addEventListener('scroll', function() {
     var header = document.querySelector('.header');
-    if (window.scrollY > 0) {
+    var scrollTop = window.scrollY;
+
+    if (scrollTop > lastScrollTop) {
+        // Si el desplazamiento es hacia abajo
         header.classList.add('scroll');
     } else {
+        // Si el desplazamiento es hacia arriba
         header.classList.remove('scroll');
     }
-  });
-  
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Para manejar el caso del desplazamiento al tope de la página
+});
