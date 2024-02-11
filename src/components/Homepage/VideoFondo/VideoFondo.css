@@ -1,0 +1,21 @@
+.videoPrincipal{
+
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+}
+
+@media (max-width: 768px) {
+    .videoPrincipal{
+        top: 0;
+        left: -32%;
+        position: absolute;
+        transform: translateX(-32%);
+        width: auto;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+        /* margin-right: 90%; */
+    }
+}
