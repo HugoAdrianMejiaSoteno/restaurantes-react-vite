@@ -9,6 +9,28 @@ const VideoFondo = () => {
 
     useEffect(() => {
         const video = document.querySelector('.videoPrincipal');
+
+        // Desactivar la interacción del usuario con el video
+        video.addEventListener('click', preventDefault);
+        video.addEventListener('touchstart', preventDefault);
+
+        // Función para prevenir el comportamiento predeterminado de los eventos
+        function preventDefault(event) {
+            event.preventDefault();
+        }
+
+        // Reproducir automáticamente el video al cargar la página
+        video.play();
+
+        return () => {
+            // Eliminar los event listeners al desmontar el componente
+            video.removeEventListener('click', preventDefault);
+            video.removeEventListener('touchstart', preventDefault);
+        };
+    }, []); 
+
+    useEffect(() => {
+        const video = document.querySelector('.videoPrincipal');
         const isVideoRoute = location.pathname === '/';
 
         if (!isVideoRoute) {
