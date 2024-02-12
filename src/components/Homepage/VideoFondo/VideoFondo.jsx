@@ -22,7 +22,7 @@ const VideoFondo = () => {
 
     return (
         <div style={{ display: videoVisible ? 'block' : 'none' }}>
-            <video src={video1} autoPlay muted playsInline loop className='videoPrincipal' controls={false}></video>
+            <video src={video1} disablePictureInPicture autoPlay muted playsInline loop className='videoPrincipal' controls={false}></video>
         </div>
     );
     // window.addEventListener('DOMContentLoaded', (event) => {
