@@ -351,6 +351,7 @@
         padding: 0px;
         margin: 0px;
         /* margin-right: 90%; */
+        display: none;
     }
 
     .boton1{

@@ -1,73 +1,39 @@
-import { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-import "./VideoFondo.css"
+import { useState, useEffect } from 'react';
 import video1 from '../../../assets/Videos/restaurante640.mp4'
 
 const VideoFondo = () => {
-    const location = useLocation();
-    const [videoVisible, setVideoVisible] = useState(true);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const [videoLoaded, setVideoLoaded] = useState(false);
 
     useEffect(() => {
-        const video = document.querySelector('.videoPrincipal');
-
-        // Desactivar la interacción del usuario con el video
-        video.addEventListener('click', preventDefault);
-        video.addEventListener('touchstart', preventDefault);
-
-        // Función para prevenir el comportamiento predeterminado de los eventos
-        function preventDefault(event) {
-            event.preventDefault();
-        }
-
-        // Reproducir automáticamente el video al cargar la página
-        video.play();
-
-        return () => {
-            // Eliminar los event listeners al desmontar el componente
-            video.removeEventListener('click', preventDefault);
-            video.removeEventListener('touchstart', preventDefault);
+        // Función para actualizar el estado de isMobile cuando cambia el tamaño de la pantalla
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
         };
-    }, []); 
 
-    useEffect(() => {
-        const video = document.querySelector('.videoPrincipal');
-        const isVideoRoute = location.pathname === '/';
+        // Agregar un event listener para el evento de cambio de tamaño de la pantalla
+        window.addEventListener('resize', handleResize);
 
-        if (!isVideoRoute) {
-            video.pause();
-            setVideoVisible(false);
-        } else {
-            video.play();
-            setVideoVisible(true);
-        }
-    }, [location.pathname]);
+        // Limpiar el event listener cuando el componente se desmonta
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const handleVideoLoad = () => {
+        setVideoLoaded(true);
+    };
 
     return (
-        <div style={{ display: 'none' }}>
-            <video src={video1} disablePictureInPicture autoPlay muted playsInline loop className='videoPrincipal' controls={false}></video>
-        </div>
+        <>
+            {isMobile ? (
+                <img src="https://static.wixstatic.com/media/00feb8_87a2c0593c784c95b6e8f996d4e9b0b4~mv2.jpg/v1/fit/w_600,h_899,q_90/00feb8_87a2c0593c784c95b6e8f996d4e9b0b4~mv2.jpg" alt="Imagen para dispositivos móviles" className='imagenPrincipal'/>
+            ) : (
+                <video src={video1} autoPlay muted playsInline loop className='videoPrincipal' controls={false} onLoadedData={handleVideoLoad}></video>
+            )}
+            {!videoLoaded && isMobile && <img src="https://static.wixstatic.com/media/00feb8_87a2c0593c784c95b6e8f996d4e9b0b4~mv2.jpg/v1/fit/w_600,h_899,q_90/00feb8_87a2c0593c784c95b6e8f996d4e9b0b4~mv2.jpg" alt="Imagen para dispositivos móviles" className='imagenPrincipal'/>}
+        </>
     );
-    // window.addEventListener('DOMContentLoaded', (event) => {
-    //     // Reproducir automáticamente el video al cargar la página
-    //     const video = document.querySelector('.videoPrincipal');
-    //     video.play();
-        
-    //     // Evitar que el video se abra en una ventana emergente en dispositivos móviles
-    //     if ('ontouchstart' in window) {
-    //         video.addEventListener('touchstart', (event) => {
-    //             event.preventDefault();
-    //         });
-    //     }
-    
-    //     // Evitar que el video se abra en pantalla completa en dispositivos móviles al interactuar con la página
-    //     document.addEventListener('visibilitychange', () => {
-    //         if (document.visibilityState === 'hidden') {
-    //             video.pause();
-    //         } else {
-    //             video.play();
-    //         }
-    //     });
-    // });
 };
 
 export default VideoFondo;

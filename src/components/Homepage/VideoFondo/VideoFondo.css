@@ -17,5 +17,16 @@
         padding: 0px;
         margin: 0px;
         /* margin-right: 90%; */
+        display: none;
+    }
+    .imagenPrincipal{
+        top: 0;
+        left: 0%; 
+        position: absolute;
+        /* transform: translateX(-32%); */
+        width: auto;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
     }
 }
