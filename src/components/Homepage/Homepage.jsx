@@ -12,15 +12,31 @@ import Footer from '../Footer/Footer';
 
 
 import { Contexto } from '../../components/Servicios/Memoria';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ArticuloIndividual from './ArticuloIndividual/ArticuloIndividual';
-import VideoFondo from './VideoFondo/VideoFondo';
 
 const Homepage = ()=>{
 
     // eslint-disable-next-line no-unused-vars
     const [open, setOpen, datos, setDatos, datosRating5, setDatosRating5] = useContext(Contexto);
+
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    useEffect(() => {
+        // Función para actualizar el estado de isMobile cuando cambia el tamaño de la pantalla
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        // Agregar un event listener para el evento de cambio de tamaño de la pantalla
+        window.addEventListener('resize', handleResize);
+
+        // Limpiar el event listener cuando el componente se desmonta
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
 
     return (
@@ -29,8 +45,11 @@ const Homepage = ()=>{
             {/* Primera seccion */}
             <div className="imagenPrincipal-container">
                 {/* El atributo playsinline es para que el video no salga en una ventana emergente de los dispositivos moviles NOTA: Muchos navegadores requieren que los videos estén en silencio para permitir la reproducción automática. Agrego el atributo muted al elemento <video> para garantizar que el video esté silenciado y el loop. */}
-                {/* <video src={video1} autoPlay muted playsInline loop className='videoPrincipal' controls={false}></video> */}
-                <VideoFondo></VideoFondo>
+                {isMobile ? (
+                    <img src="https://static.wixstatic.com/media/00feb8_87a2c0593c784c95b6e8f996d4e9b0b4~mv2.jpg/v1/fit/w_600,h_899,q_90/00feb8_87a2c0593c784c95b6e8f996d4e9b0b4~mv2.jpg" alt="Imagen para dispositivos móviles" className='imagenPrincipal'/>
+                    ) : (
+                    <video src={video1} autoPlay muted playsInline loop className='videoPrincipal' controls={false}></video>
+                )}
                 <h3 className='textoVideo1'>NEW IN</h3>
                 <button className='boton1'>Visitar</button>
             </div>
