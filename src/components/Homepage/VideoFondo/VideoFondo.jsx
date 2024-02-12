@@ -4,33 +4,27 @@ import "./VideoFondo.css"
 import video1 from '../../../assets/Videos/restaurante640.mp4'
 
 const VideoFondo = () => {
-
-    //en lugar de pausar el video cuando cambias de ruta, puedes desmontar el componente del video cuando navegas a otra ruta y montarlo nuevamente cuando vuelves a la ruta del video. Esto asegurará que el video no se reproduzca ni se muestre en pantalla completa cuando no esté en la página. En este enfoque, el componente del video se montará solo si estás en la ruta del video. Si navegas a otra ruta, el componente del video se desmontará y el video se pausará. Cuando vuelvas a la ruta del video, el componente del video se montará nuevamente y el video se reproducirá. Esto debería evitar que el video se abra y se muestre en pantalla completa al cambiar de ruta.
     const location = useLocation();
-    const [videoMounted, setVideoMounted] = useState(true);
+    const [videoVisible, setVideoVisible] = useState(true);
 
     useEffect(() => {
         const video = document.querySelector('.videoPrincipal');
+        const isVideoRoute = location.pathname === '/';
 
-        if (videoMounted) {
-            video.play();
+        if (!isVideoRoute) {
+            video.pause();
+            setVideoVisible(false);
         } else {
-            video.pause();
+            video.play();
+            setVideoVisible(true);
         }
+    }, [location.pathname]);
 
-        return () => {
-            video.pause();
-        };
-    }, [videoMounted]);
-
-    // Comprueba si la ruta actual coincide con la ruta del video
-    const isVideoRoute = location.pathname === '/';
-
-    // Si no estás en la ruta del video, desmonta el componente del video
-    if (!isVideoRoute) {
-        return null;
-    }
-
+    return (
+        <div style={{ display: videoVisible ? 'block' : 'none' }}>
+            <video src={video1} autoPlay muted playsInline loop className='videoPrincipal' controls={false}></video>
+        </div>
+    );
     // window.addEventListener('DOMContentLoaded', (event) => {
     //     // Reproducir automáticamente el video al cargar la página
     //     const video = document.querySelector('.videoPrincipal');
@@ -52,10 +46,6 @@ const VideoFondo = () => {
     //         }
     //     });
     // });
-
-    return (
-        <video src={video1} autoPlay muted playsInline loop className='videoPrincipal' controls={false}></video>
-    );
 };
 
 export default VideoFondo;
