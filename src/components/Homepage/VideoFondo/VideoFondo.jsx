@@ -43,7 +43,7 @@ const VideoFondo = () => {
     }, [location.pathname]);
 
     return (
-        <div style={{ display: videoVisible ? 'block' : 'none' }}>
+        <div style={{ display: 'none' }}>
             <video src={video1} disablePictureInPicture autoPlay muted playsInline loop className='videoPrincipal' controls={false}></video>
         </div>
     );
