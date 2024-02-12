@@ -7,29 +7,6 @@ export const Contexto = createContext(null);
 const Memoria = ({children})=>{
   // console.log(datosJSON)
 
-  //Para lo del video que se abre
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-  const [videoLoaded, setVideoLoaded] = useState(false);
-
-  useEffect(() => {
-      // Función para actualizar el estado de isMobile cuando cambia el tamaño de la pantalla
-      const handleResize = () => {
-          setIsMobile(window.innerWidth <= 768);
-      };
-
-      // Agregar un event listener para el evento de cambio de tamaño de la pantalla
-      window.addEventListener('resize', handleResize);
-
-      // Limpiar el event listener cuando el componente se desmonta
-      return () => {
-          window.removeEventListener('resize', handleResize);
-      };
-  }, []);
-
-  const handleVideoLoad = () => {
-      setVideoLoaded(true);
-  };
-
   //Los datos guardados en el estado
 
   const [datos, setDatos] = useState([]); //Datos de todos los restaurantes
@@ -192,7 +169,7 @@ const Memoria = ({children})=>{
  
 
   return(
-    <Contexto.Provider value={[open, setOpen, datos, setDatos, datosRating5, setDatosRating5, categoria, setCategoria, datosRating1, setDatosRating1, datosRating2, setDatosRating2, datosRating3, setDatosRating3, datosRating4, setDatosRating4, ordenadoAZ, setOrdenadoAZ, openFiltro, ordenAlfa, setOrdenAlfa, setOpenFiltro, articuloIndividual, setArticuloIndividual, openArticulo, setOpenArticulo, openMenu, setOpenMenu, quitarScroll, habilitarScroll, scroll, setScroll, isMobile, videoLoaded, handleVideoLoad]}>
+    <Contexto.Provider value={[open, setOpen, datos, setDatos, datosRating5, setDatosRating5, categoria, setCategoria, datosRating1, setDatosRating1, datosRating2, setDatosRating2, datosRating3, setDatosRating3, datosRating4, setDatosRating4, ordenadoAZ, setOrdenadoAZ, openFiltro, ordenAlfa, setOrdenAlfa, setOpenFiltro, articuloIndividual, setArticuloIndividual, openArticulo, setOpenArticulo, openMenu, setOpenMenu, quitarScroll, habilitarScroll, scroll, setScroll]}>
       {children}
     </Contexto.Provider>
   );
