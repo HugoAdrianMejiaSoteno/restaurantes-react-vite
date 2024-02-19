@@ -60,25 +60,21 @@ const Memoria = ({children})=>{
     unaEstrella: false
   })
 
-
-  //ESTA PETICION SERIA A LA API DATOS https://recruiting-datasets.s3.us-east-2.amazonaws.com/data_melp.json SIN EMBARGO HAY UN ERROR DE CORS POR LO QUE USARÉ LOS DATOS UTILIZANDO EL FETCH AL ARCHIVO .JSON
-
+  //Pedimos los datos a mi backend de django
   useEffect(() => {
+    //Usamos una funcion asincrona para realizar la peticion a la API
     const fetchData = async () => {
+      //try-catch para manejar cualquier error
       try {
-        //Aqui se realiza la peticion fetch a la api json, como no es una api permitida por los cors en desarrollo se puede hacer la peticion al ./datos.json pero en hosting y produccion no acepta ese tipo de fetch asi que obtengo los datos directamente del json pero anexo como es que se realizan las peticiones a las apis publicas o permitidas
-
-        // const response = await fetch("https://recruiting-datasets.s3.us-east-2.amazonaws.com/data_melp.json");
-        // const response = await fetch("./datos.json");
-        // const datosObtenidos = await response.json();
-        const datosObtenidos = datosJSON;
+        const response = await fetch("https://restaurantes-django-backend.onrender.com/restaurantes/datos/");
+        const datosObtenidos = await response.json(); //Transformamos la respuesta a formato json
         setDatos(datosObtenidos);
+        console.log(datosObtenidos)
       } catch (error) {
         console.log("El error es:" + error);
         console.log(datos);
       }
     };
-  
     fetchData();
   }, []);
   
