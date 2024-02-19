@@ -69,7 +69,7 @@ const Memoria = ({children})=>{
         const response = await fetch("https://restaurantes-django-backend.onrender.com/restaurantes/datos/");
         const datosObtenidos = await response.json(); //Transformamos la respuesta a formato json
         setDatos(datosObtenidos);
-        console.log(datosObtenidos)
+        // console.log(datosObtenidos)
       } catch (error) {
         console.log("El error es:" + error);
         console.log(datos);
